@@ -10,7 +10,7 @@ class Pub
   end
 
 
-  def bar_serves(customer, drink)
+  def bar_serves(customer,  drink)
     #customer calls buy_drink method with drink containing price
     customer.remove_cash(drink.price)
     #removes price of drink from till
@@ -28,6 +28,12 @@ class Pub
       end
     end
   end
+
+  # def age_check(customer)
+  #   return if  customer > 18
+  #     return true
+  #   end
+  # end
 
 
 

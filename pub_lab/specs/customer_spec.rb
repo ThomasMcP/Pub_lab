@@ -6,7 +6,7 @@ require_relative('../pub.rb')
 class TestCustomer < MiniTest::Test
 
   def setup
-    @customer = Customer.new("Johnny Walker", 80)
+    @customer = Customer.new("Johnny Walker", 80, 18)
   end
 
   def test_customer_has_class_default

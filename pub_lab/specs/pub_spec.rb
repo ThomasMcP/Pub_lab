@@ -11,7 +11,7 @@ class TestPub < MiniTest:: Test
     @drink2 = Drink.new("Twister", 9)
     @drink3 = Drink.new("Blue Moon", 4)
     @drink_list = [@drink1, @drink2, @drink3]
-    @customer1 = Customer.new("Michael", 50)
+    @customer1 = Customer.new("Michael", 50, 18)
     @pub = Pub.new("The Blue Blazer", 100, @drink_list)
  end
 
@@ -48,6 +48,12 @@ def test_remove_drink_from_list
   assert_equal(expected, actual)
 
 end
+
+# def test_customer_age
+#   expected = 18
+#   actual = @pub.age_check(@customer1)
+#   assert_equal(expected, actual)
+# end
 
 
 end
