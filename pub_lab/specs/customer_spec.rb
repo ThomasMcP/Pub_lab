@@ -20,20 +20,13 @@ class TestCustomer < MiniTest::Test
   end
 
   def test_customer_has_wallet
-    assert_equal(100, @customer.wallet)
+    assert_equal(80, @customer.wallet)
   end
 
   def test_remove_cash_from_wallet
-    expected = 90
+    expected = 70
     actual = @customer.remove_cash(10)
     assert_equal(expected, actual)
-  end
-
-  def test_buy_a_drink
-     expected = 71
-     
-     assert_equal(expected, )
-
   end
 
 

@@ -29,9 +29,24 @@ end
 def test_pub_can_serve_customer
      expected = 109
      # @customer1.remove_cash(9)
-     actual = @pub.bar_serves(@customer1, @drink2)
-     # assert_equal(9, @customer.remove_cash(@drink2))
+     @pub.bar_serves(@customer1, @drink2)
+     actual = @pub.till
+     assert_equal(41, @customer1.wallet)
      assert_equal(expected, actual)
+end
+
+def test_count_number_of_drinks
+  expected = 3
+  actual = @pub.check_drink_count
+  assert_equal(expected, actual)
+end
+
+def test_remove_drink_from_list
+  expected = 2
+  @pub.remove_drink(@drink2)
+  actual = @pub.check_drink_count
+  assert_equal(expected, actual)
+
 end
 
 
